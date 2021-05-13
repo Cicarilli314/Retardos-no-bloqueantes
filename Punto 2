@@ -1,5 +1,5 @@
-long seg1 = 0;
-long seg2 = 0;
+long tiempo = 0;
+long tiempo2 = 0;
 void setup()
 {
   Serial.begin(9600);
@@ -7,9 +7,9 @@ void setup()
 
 void loop()
 {
-  seg1=millis();
-  if((seg1-seg2)>2000){
- seg2=seg1;
+  tiempo=millis();
+  if((tiempo-tiempo2)>2000){
+ tiempo2=tiempo;
   Serial.println("Timer-Activo");
   }
 }
