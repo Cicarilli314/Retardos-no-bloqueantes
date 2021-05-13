@@ -1,7 +1,7 @@
-long seg1 = 0;
-long seg1a = 0;
-long seg2 = 0;
-long seg2a = 0;
+long tiempo = 0;
+long tiempo15 = 0;
+long tiempo2 = 0;
+long tiempo25 = 0;
 int led=2;
 int leda=3;
 void setup()
@@ -13,20 +13,20 @@ void setup()
 
 void loop()
 {   
-  seg1 =millis();
-  seg1a =millis();
+  tiempo =millis();
+  tiempo15 =millis();
  
   
-  if((seg1a-seg2a)>1000){
+  if((tiempo15-tiempo25)>1000){
   digitalWrite(leda,HIGH);
-  }if((seg1a-seg2a)>2000){
- seg2a=seg1a;
+  }if((tiempo15-tiempo25)>2000){
+ tiempo25=tiempo15;
     digitalWrite(leda,LOW);
   }
-  if((seg1-seg2)>2000){
+  if((tiempo-tiempo2)>2000){
   digitalWrite(led,HIGH);
-  }if((seg1-seg2)>4000){
- seg2=seg1;
+  }if((tiempo-tiempo)>4000){
+ tiempo2=tiempo;
     digitalWrite(led,LOW);
   }
   
